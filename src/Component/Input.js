@@ -1,16 +1,16 @@
 import React from "react";
 
-class B5Email extends React.Component {
+class Input extends React.Component {
   render() {
     return (
       <label>
-        Email Address
+        {this.props.labelValue}
         <br />
         <input
           className="input"
-          name="website"
-          placeholder="ex: myname@gmail.com"
-          value={this.props.website}
+          name={this.props.name}
+          placeholder={this.props.placeholder}
+          value={this.props.value}
           onChange={this.props.handleImputChange}
         />
       </label>
@@ -18,4 +18,4 @@ class B5Email extends React.Component {
   }
 }
 
-export default B5Email;
+export default Input;

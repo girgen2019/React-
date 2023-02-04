@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Form from "./Component/Form";
 import Button from "./Component/Button";
@@ -10,7 +9,10 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <Form />
-          <Button />
+          <div className="Button-block">
+            <Button name="Save" />
+            <Button name="Cancel" />
+          </div>
         </header>
       </div>
     );

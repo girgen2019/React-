@@ -1,13 +1,7 @@
 import React from "react";
 import "../Component/FormStyle.css";
-import B1Name from "./B1Name.js";
-import B2Surname from "./B2Surname";
-import B3Birthday from "./B3Birthday.js";
-import B4Phone from "./B4Phone.js";
-import B5Email from "./B5Email.js";
-import B6AboutMe from "./B6AboutMe.js";
-import B7Stack from "./B7Stack.js";
-import B8Discribe from "./B8Discribe.js";
+import Input from "./Input.js";
+import Placeholder from "./Placeholder.js";
 
 class Form extends React.Component {
   state = {
@@ -15,13 +9,13 @@ class Form extends React.Component {
     surname: "",
     birthday: "",
     phone: "",
-    website: "",
+    email: "",
     aboutMe: "",
     steck: "",
     describeLastProject: "",
   };
 
-  handleImputChange = (event) => {
+  handleInputChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
@@ -29,44 +23,63 @@ class Form extends React.Component {
     return (
       <form>
         <h1>Create form</h1>
-        <B1Name
-          name={this.state.name}
+        <Input
+          labelValue = "First name"
+          placeholder = "First name"
+          value={this.state.value}
           handleImputChange={this.handleImputChange}
         />
         <br />
-        <B2Surname
-          name={this.state.surname}
-          handleImputChange={this.handleImputChange}
+        <Input
+          labelValue = "Second name"
+          placeholder = "Second name"
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B3Birthday
-          name={this.state.birthday}
-          handleImputChange={this.handleImputChange}
+        <Input
+          labelValue = "Birthday"
+          placeholder = "Birthday"
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B4Phone
-          name={this.state.phone}
-          handleImputChange={this.handleImputChange}
+        <Input
+          labelValue = "Phone"
+          placeholder = "+ 375(  )  _ _  -  _ _  -  _ _"
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B5Email
-          name={this.state.website}
-          handleImputChange={this.handleImputChange}
+        <Input
+          labelValue = "Email"
+          placeholder = "ex: myname@gmail.com"
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B6AboutMe
-          name={this.state.aboutMe}
-          handleImputChange={this.handleImputChange}
+        <Placeholder
+          labelPlaceHolder = "About Me"
+          placeholder = "About Me"
+          rows = {7}
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B7Stack
-          name={this.state.aboutMe}
-          handleImputChange={this.handleImputChange}
+        <Placeholder
+          labelPlaceHolder = "Steck technologies"
+          placeholder = "Steck technologies"
+          rows = {7}
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
         <br />
-        <B8Discribe
-          name={this.state.aboutMe}
-          handleImputChange={this.handleImputChange}
+        <Placeholder
+          labelPlaceHolder = "Describe last project"
+          placeholder = "Describe last project"
+          rows = {7}
+          value={this.state.value}
+          handleInputChange={this.handleInputChange}
         />
       </form>
     );
