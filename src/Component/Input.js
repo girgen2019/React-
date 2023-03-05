@@ -1,6 +1,8 @@
-import React from "react";
+import React from 'react';
 
 class Input extends React.Component {
+
+  
   render() {
     return (
       <label>
@@ -9,9 +11,9 @@ class Input extends React.Component {
         <input
           className="input"
           name={this.props.name}
-          placeholder={this.props.placeholder}
           value={this.props.value}
-          onChange={this.props.handleImputChange}
+          placeholder={this.props.placeholder}
+          onChange={this.props.handleInputChange}
         />
       </label>
     );

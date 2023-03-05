@@ -1,11 +1,14 @@
 import React from "react";
-import "./Button.css";
+import "./Style/Button.css";
 
 class Button extends React.Component {
   render() {
     return (
       <>
-        <button className="button">{this.props.name}</button>
+        <button className="button"
+        name={this.props.name}
+        onClick={this.props.validateForm}
+        >{this.props.name}</button>
       </>
     );
   }

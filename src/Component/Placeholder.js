@@ -7,12 +7,13 @@ class Placeholder extends React.Component {
         {this.props.labelPlaceHolder}
         <br />
         <textarea
-          className="input"
+          className="textarea"
           name = {this.props.name}
           placeholder={this.props.placeholder}
           rows={this.props.rows}
           value={this.props.value}
-          onChange={this.props.handleImputChange}
+          onChange={this.props.handleInputChange}
+          
         />
       </label>
     );
