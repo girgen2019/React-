@@ -85,13 +85,11 @@ class Form extends React.Component {
           name: '',
           errorName: 'Field is not valid',
         });
-        console.log(this.state.errorName);
       } else if (this.state.name.search(/^[A-ZА-ЯЁ]/g) === -1) {
         this.setState({
           name: '',
           errorName: 'Name should start with a capital letter',
         });
-        console.log(this.state);
       } else {
         this.setState({ name: event.target.value });
       }
@@ -226,7 +224,7 @@ class Form extends React.Component {
               value={this.state.birthday}
               handleInputChange={this.handleInputChange}
             />
-            {(!this.state.birthday || errorAble === true) && (
+            {!this.state.birthday  && (
               <div style={{ color: 'red', marginTop: '-5px' }}>
                 {errorBirthday}
               </div>
@@ -240,7 +238,7 @@ class Form extends React.Component {
               value={this.state.surname}
               handleInputChange={this.handleInputChange}
             />
-            {(!this.state.surname || errorAble === true) && (
+            {!this.state.surname && (
               <div style={{ color: 'red', marginTop: '-5px' }}>
                 {errorSurname}
               </div>
@@ -253,7 +251,7 @@ class Form extends React.Component {
               value={this.state.phone}
               handleInputChange={this.handleInputChange}
             />
-            {(!this.state.phone || errorAble === true) && (
+            {!this.state.phone  && (
               <div style={{ color: 'red', marginTop: '-5px' }}>
                 {errorPhone}
               </div>
