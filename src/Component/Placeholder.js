@@ -1,6 +1,6 @@
 import React from "react";
 
-class Placeholder extends React.Component {
+class Textarea extends React.Component {
   render() {
     return (
         <label>
@@ -20,4 +20,4 @@ class Placeholder extends React.Component {
   }
 }
 
-export default Placeholder;
+export default Textarea;

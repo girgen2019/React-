@@ -8,7 +8,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <Form />
-        </header>
+        </header>  
       </div>
     );
   }

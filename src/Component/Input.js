@@ -9,6 +9,7 @@ class Input extends React.Component {
         {this.props.labelValue}
         <br />
         <input
+          type={this.props.type || "text"}
           className="input"
           name={this.props.name}
           value={this.props.value}
