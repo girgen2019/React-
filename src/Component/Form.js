@@ -176,9 +176,9 @@ class Form extends React.Component {
                 <h3>{this.state.birthday}</h3>
                 <h3>{this.state.phone}</h3>
                 <h3>{this.state.email}</h3>
-                <div><div style={{width:"100%"}}>{this.state.aboutMe}</div></div>
-                <div><div style={{width:"100%"}}>{this.state.stack}</div></div>
-                <div><div style={{width:"100%"}}>{this.state.describe}</div></div>
+                <div>{this.state.aboutMe}</div>
+                <div>{this.state.stack}</div>
+                <div>{this.state.describe}</div>
               </div>
             </div>
           ),
